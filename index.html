@@ -1,35 +1,68 @@
-veverka
-veverka
-veverka
-veverka
-veverka
-
-veverka
-veverka
-veverka
-veverka
-veverka
-
-veverka
-veverka
-veverka
-veverka
-veverka
-
-veverka
-veverka
-veverka
-veverka
-veverka
-
-veverka
-veverka
-veverka
-veverka
-veverka
-
-veverka
-veverka
-veverka
-veverka
-veverka
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>veverka.net</title>
+  <meta name="description" content="veverka.net — nothing here yet.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐿️</text></svg>">
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --fg: #2b2118;
+      --muted: #8a7a6a;
+      --accent: #b5562b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #17120e;
+        --fg: #efe6dc;
+        --muted: #9c8c7c;
+        --accent: #e07a45;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      text-align: center;
+    }
+    main { max-width: 32rem; }
+    .squirrel {
+      font-size: 4rem;
+      line-height: 1;
+      display: inline-block;
+      animation: hop 2.4s ease-in-out infinite;
+    }
+    @keyframes hop {
+      0%, 70%, 100% { transform: translateY(0); }
+      80% { transform: translateY(-14px) rotate(-6deg); }
+      90% { transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) { .squirrel { animation: none; } }
+    h1 {
+      margin-top: 1.25rem;
+      font-size: clamp(2rem, 7vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h1 span { color: var(--accent); }
+    p { margin-top: 0.75rem; font-size: 1.125rem; }
+    .note { color: var(--muted); font-size: 0.95rem; }
+    em { font-style: normal; color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="squirrel" role="img" aria-label="squirrel">🐿️</div>
+    <h1>veverka<span>.net</span></h1>
+    <p>Nothing here yet — the squirrel is still gathering nuts.</p>
+    <p class="note"><em>veverka</em> is Czech for squirrel.</p>
+  </main>
+</body>
+</html>
